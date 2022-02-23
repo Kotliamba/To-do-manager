@@ -3,7 +3,7 @@ enum TaskPriority{
     case important
 }
 
-enum TaskStatus{
+enum TaskStatus: Int{
     case planned
     case completed
 }
@@ -33,7 +33,11 @@ class TaskStorage: TaskStorageProtocol {
         let testTasks: [TaskProtocol] = [
             Task(title: "Купить хлеб", type: .normal, status: .planned),
             Task(title: "Помыть кота", type: .important, status: .planned),
-            Task(title: "Сделать упражнения", type: .important, status: .completed)
+            Task(title: "Сделать упражнения", type: .important, status: .completed),
+            Task(title: "Сделать упражнения с использованием техники Кегеля", type: .normal, status: .planned),
+            Task(title: "Сделать упражнения с использованием техники Шварца", type: .normal, status: .planned),
+            Task(title: "Сделать упражнения с использованием техники Гоголя", type: .normal, status: .planned),
+            Task(title: "Сделать упражнения с использованием техники Кегельбана", type: .normal, status: .completed)
         ]
         return testTasks
     }
